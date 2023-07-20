@@ -1,27 +1,28 @@
 body {
     width: auto;
-    height: 800px;
+    height: auto;
     background: url(./images/img_background.svg), #FF7A7A 50%;
 
 }
 
 .container {
-    display: flex;
     margin: 0 auto;
-    max-width: 1366px;
+    max-width: 1096px;
+    
 }
 
 .content {
-    height: 100vh;
-    justify-content: center;
     display: flex;
     gap: 80px;
     align-items: center;
+    justify-content: center;
+    /* width: 100vh;
+    height: 100vh;   */
 }
 
-/* .content-left {
-    margin: 80px;
-} */
+.content-left {
+    margin: 0px;
+}
 
 .title {
     color: #FFF;
@@ -29,20 +30,20 @@ body {
     font-size: 40px;
     font-weight: 700;
     line-height: 40px;
-    margin-bottom: 41px;
+    margin: 299px 0px 41px 0;;
 }
 
 .sub-title {
     color: #FFF;
     font-size: 18px;
     font-family: Poppins, sans-serif;
-    
+    margin:  41px 0px 308px 0;
 }
 
 .content-right .top-button {
-    /* margin-top: 134px; */
+    
     background: #6055A5;
-    padding: 20px;
+    padding: 17px;
     color: #FFF;
     font-size: 16px;
     font-family: Poppins, sans-serif;
@@ -57,18 +58,18 @@ body {
     background: #FFF;
     border-radius: 8px;
     box-shadow: 0px 6px 0px 0px rgba(0, 0, 0, 0.12);
+    
 }
 
 .content-right .form .form-body {
-    padding: 32px 32px 21px;
+    padding-top: 21px;
 }
 
 .content-right .form .form-group input {
     border-radius: 8px;
-    /* margin-bottom: 21px; */
     font-family: Poppins, sans-serif;
-    padding: 21px 372px 21px 21px;
-    font-size: 16px;
+    padding: 15px 135px 15px 15px;
+    font-size: 14px;
     font-weight: 800;
     border: 1px solid #B9B6D3;
 }
@@ -76,13 +77,14 @@ body {
 .content-right .form .btn {
     border: 1px solid #2FB67C;
     border-radius: 8px;
-    padding: 18px 121px;
+    padding: 16px 80px;
     background: #38CC8C;
     box-shadow: 0px 2px 0px 0px #2FB67C;
 
 }
 .form-input{
     padding-bottom: 21px;
+    position: relative;
 }
 .text {
     font-family: Poppins, sans-serif;
@@ -117,13 +119,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 17px;
+    padding: 0 32px 17px 32px;
 }
 
 .icon_error {
     position: absolute;
-    right: 46px;
-    margin-top: 22px;
+    right: 10px;
+    margin-top: 14px;
     display: none;
 }
 
@@ -133,7 +135,10 @@ body {
     text-align: right;
     font-family: Poppins, sans-serif;
     font-size: 11px;
-    font-weight: 400;
+    position: absolute;
+    right: 3px;
+    
+
 }
 
 .btn {
@@ -169,7 +174,7 @@ body {
     }
 
     .content-right .form .form-group input {
-        padding: 15px 21px 15px 15px;
+        padding: 15px 60px 15px 15px;
 
     }
 
@@ -177,9 +182,12 @@ body {
 
         padding: 18px 42px;
     }
+    .content-right .top-button{
+        padding: 0px;
+    }
 
     .content-left {
-        margin: 0px;
+        margin: 0;
         text-align: center;
     }
 
@@ -198,7 +206,7 @@ body {
     }
 
     .top-button {
-        margin: 44px 60px 24px;
+        margin: 0px 60px 24px;
     }
 
     .button-subtext {
@@ -213,13 +221,14 @@ body {
         display: block;
     }
 
-    .form-group {
-        padding: 0px;
+    
+    /* .icon_error{
+        right: 60px;;
     }
 
     .error-message {
-        margin-left: 70px;
-    }
+        right: 52px;
+    } */
 
     .form-text {
         display: block;

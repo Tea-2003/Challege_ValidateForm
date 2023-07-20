@@ -4,6 +4,7 @@ document.getElementById('btn').addEventListener('click', function () {
     var lastname = document.getElementById('lastname').value;
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
+    var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{1,1})+$/;
 
 
     document.getElementById("frname-error").textContent = "";
@@ -27,15 +28,19 @@ document.getElementById('btn').addEventListener('click', function () {
     } else {
         document.getElementById("lastname").classList.remove("error");
         document.getElementById("lastname-icon-error").style.display = "none";
+        
+        
     }
 
-    if (email === "") {
+    if (email === "" || !emailRegex.test(email)) {
         document.getElementById("email-error").textContent = "Looks like this is not an email";
         document.getElementById("email").classList.add("error");
         document.getElementById("email-icon-error").style.display = "inline-block";
     } else {
         document.getElementById("email").classList.remove("error");
         document.getElementById("email-icon-error").style.display = "none";
+        
+        
     }
 
     if (password === "") {
@@ -45,6 +50,8 @@ document.getElementById('btn').addEventListener('click', function () {
     } else {
         document.getElementById("password").classList.remove("error");
         document.getElementById("password-icon-error").style.display = "none";
+        
+        
     }
 
 
