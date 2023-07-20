@@ -6,8 +6,8 @@ body {
 }
 
 .container {
+    display: flex;
     margin: 0 auto;
-    padding: 0px;
     max-width: 1366px;
 }
 
@@ -15,12 +15,13 @@ body {
     height: 100vh;
     justify-content: center;
     display: flex;
+    gap: 80px;
     align-items: center;
 }
 
-.content-left {
+/* .content-left {
     margin: 80px;
-}
+} */
 
 .title {
     color: #FFF;
@@ -32,10 +33,10 @@ body {
 }
 
 .sub-title {
-    /* width: 488px; */
     color: #FFF;
+    font-size: 18px;
     font-family: Poppins, sans-serif;
-    font-weight: 600;
+    
 }
 
 .content-right .top-button {
@@ -59,14 +60,14 @@ body {
 }
 
 .content-right .form .form-body {
-    padding-top: 32px;
+    padding: 32px 32px 21px;
 }
 
 .content-right .form .form-group input {
     border-radius: 8px;
-    margin-bottom: 21px;
+    /* margin-bottom: 21px; */
     font-family: Poppins, sans-serif;
-    padding: 15px 372px 15px 15px;
+    padding: 21px 372px 21px 21px;
     font-size: 16px;
     font-weight: 800;
     border: 1px solid #B9B6D3;
@@ -80,7 +81,9 @@ body {
     box-shadow: 0px 2px 0px 0px #2FB67C;
 
 }
-
+.form-input{
+    padding-bottom: 21px;
+}
 .text {
     font-family: Poppins, sans-serif;
     font-size: 12px;
@@ -93,18 +96,44 @@ body {
     font-size: 12px;
     font-weight: 700;
 }
+.button-text{
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+}
+.button-subtext {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    
+}
 
 .form-group {
+    position: relative;
     padding: 0 32px;
 }
 
-.from-btn { 
+.from-btn {
     display: flex;
+    align-items: center;
     justify-content: center;
     margin-bottom: 17px;
 }
-.icon_error{
-    margin-left: -31px;
+
+.icon_error {
+    position: absolute;
+    right: 46px;
+    margin-top: 22px;
+    display: none;
+}
+
+
+.error-message {
+    color: red;
+    text-align: right;
+    font-family: Poppins, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
 }
 
 .btn {
@@ -124,6 +153,8 @@ body {
 }
 
 
+
+
 /* Reponsive website */
 
 @media screen and (max-width: 400px) {
@@ -132,17 +163,17 @@ body {
         padding: 0;
     }
 
-    .container .content{
+    .container .content {
         width: 100%;
         display: block;
     }
 
-    .content-right .form .form-group input{
+    .content-right .form .form-group input {
         padding: 15px 21px 15px 15px;
 
     }
 
-    .content-right .form .btn{
+    .content-right .form .btn {
 
         padding: 18px 42px;
     }
@@ -151,27 +182,48 @@ body {
         margin: 0px;
         text-align: center;
     }
-    .title{
+
+    .title {
         margin: 90px 30px 15px 30px;
     }
-    .sub-title{
+
+    .sub-title {
         margin: 15px 24px 44px 24px;
+        font-size: 16px;
     }
 
     .content-right {
         margin: 0px;
         text-align: center;
     }
-    .top-button{
+
+    .top-button {
         margin: 44px 60px 24px;
     }
-    .form{
-        margin: 0 30px  49px 30px;
+
+    .button-subtext {
+        color: #fff;
+        font-family: Poppins, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .form {
+        margin: 0 30px 49px 30px;
         display: block;
     }
-    .form-text{
+
+    .form-group {
+        padding: 0px;
+    }
+
+    .error-message {
+        margin-left: 70px;
+    }
+
+    .form-text {
         display: block;
         padding: 0 28px 30px;
     }
-    
+
 }

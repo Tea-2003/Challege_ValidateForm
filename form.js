@@ -1,21 +1,18 @@
+document.getElementById('btn').addEventListener('click', function () {
 
-var firstname = document.getElementById('fistname').value;
-var lastname = document.getElementById('lastname').value;
-var email = document.getElementById('email').value;
-var password = document.getElementById('password').value;
-var submitButton = document.getElementById('btn');
+    var firstname = document.getElementById('fistname').value;
+    var lastname = document.getElementById('lastname').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
 
-
-submitButton.addEventListener('btn', function (event) {
-    event.preventDefault(); // Prevent form from being submitted by default
 
     document.getElementById("frname-error").textContent = "";
     document.getElementById("lname-error").textContent = "";
     document.getElementById("email-error").textContent = "";
     document.getElementById("pass-error").textContent = "";
 
-    if (firstName === "") {
-        document.getElementById("frname-error").textContent = "Please enter your first name.";
+    if (firstname === "") {
+        document.getElementById("frname-error").textContent = "Please enter your first name";
         document.getElementById("fistname").classList.add("error");
         document.getElementById("fistname-icon-error").style.display = "inline-block";
     } else {
@@ -23,24 +20,33 @@ submitButton.addEventListener('btn', function (event) {
         document.getElementById("fistname-icon-error").style.display = "none";
     }
 
-    if (lastName === "") {
-        document.getElementById("lname-error").textContent = "Last Name cannot be empty";
+    if (lastname === "") {
+        document.getElementById("lname-error").textContent = "Last Name cannot be empty"
+        document.getElementById("lastname").classList.add("error");
+        document.getElementById("lastname-icon-error").style.display = "inline-block";
+    } else {
+        document.getElementById("lastname").classList.remove("error");
+        document.getElementById("lastname-icon-error").style.display = "none";
     }
 
     if (email === "") {
         document.getElementById("email-error").textContent = "Looks like this is not an email";
+        document.getElementById("email").classList.add("error");
+        document.getElementById("email-icon-error").style.display = "inline-block";
+    } else {
+        document.getElementById("email").classList.remove("error");
+        document.getElementById("email-icon-error").style.display = "none";
     }
 
     if (password === "") {
         document.getElementById("pass-error").textContent = "Passoword cannot be empty";
+        document.getElementById("password").classList.add("error");
+        document.getElementById("password-icon-error").style.display = "inline-block";
+    } else {
+        document.getElementById("password").classList.remove("error");
+        document.getElementById("password-icon-error").style.display = "none";
     }
 
-    var errorMessages = form.querySelectorAll('.error-message');
-    if (errorMessages.length === 0) {
-        console.log('Form valid');
-    } else {
-        console.log('Form invalid. Please check all field');
-    }
 
 
 });
