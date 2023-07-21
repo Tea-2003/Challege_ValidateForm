@@ -8,20 +8,23 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1096px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     
 }
 
 .content {
     display: flex;
-    gap: 80px;
     align-items: center;
     justify-content: center;
-    /* width: 100vh;
-    height: 100vh;   */
 }
 
 .content-left {
     margin: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
@@ -30,16 +33,17 @@ body {
     font-size: 40px;
     font-weight: 700;
     line-height: 40px;
-    margin: 299px 0px 41px 0;;
 }
 
 .sub-title {
     color: #FFF;
     font-size: 18px;
     font-family: Poppins, sans-serif;
-    margin:  41px 0px 308px 0;
+    margin:  41px 0px;
 }
-
+.content-right{
+    width: 100%;
+}
 .content-right .top-button {
     
     background: #6055A5;
@@ -62,22 +66,27 @@ body {
 }
 
 .content-right .form .form-body {
-    padding-top: 21px;
+    padding-top: 32px;
 }
 
 .content-right .form .form-group input {
     border-radius: 8px;
     font-family: Poppins, sans-serif;
-    padding: 15px 135px 15px 15px;
+    padding: 15px;
     font-size: 14px;
     font-weight: 800;
+    width: 100%;
     border: 1px solid #B9B6D3;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
 }
 
 .content-right .form .btn {
+    cursor: pointer;
     border: 1px solid #2FB67C;
     border-radius: 8px;
-    padding: 16px 80px;
+    padding: 17px 100px;
     background: #38CC8C;
     box-shadow: 0px 2px 0px 0px #2FB67C;
 
@@ -150,7 +159,7 @@ body {
 }
 
 .form-text {
-    padding-bottom: 34px;
+    padding: 0 32px 34px;
     display: flex;
     gap: 5px;
     align-items: center;
@@ -182,8 +191,15 @@ body {
 
         padding: 18px 42px;
     }
+    .form {
+        margin: 21px 30px 49px 30px;
+        
+    }
     .content-right .top-button{
-        padding: 0px;
+        padding: 17px 0;
+        margin: 30px 24px;
+        display: block;
+
     }
 
     .content-left {
@@ -196,8 +212,8 @@ body {
     }
 
     .sub-title {
-        margin: 15px 24px 44px 24px;
-        font-size: 16px;
+        margin: 15px 24px;
+        font-size: 16px;    
     }
 
     .content-right {
@@ -205,8 +221,8 @@ body {
         text-align: center;
     }
 
-    .top-button {
-        margin: 0px 60px 24px;
+    .content-right .form .form-body{
+        padding-top: 32px;
     }
 
     .button-subtext {
@@ -214,25 +230,22 @@ body {
         font-family: Poppins, sans-serif;
         font-size: 18px;
         font-weight: 700;
-    }
-
-    .form {
-        margin: 0 30px 49px 30px;
         display: block;
     }
 
-    
-    /* .icon_error{
-        right: 60px;;
+    .icon_error{
+        right: 10px;
+        top: 0px;
     }
 
     .error-message {
-        right: 52px;
-    } */
+        right: 3px;
+    }
 
     .form-text {
         display: block;
         padding: 0 28px 30px;
     }
+    
 
 }
